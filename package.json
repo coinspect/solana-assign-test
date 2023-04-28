@@ -1,0 +1,74 @@
+{
+  "name": "test-dapp-brave",
+  "version": "0.9",
+  "description": "Brave Test Suite DApp",
+  "engines": {
+    "node": ">= 17.0.0"
+  },
+  "scripts": {
+    "setup": "yarn install",
+    "deploy": "./deploy.sh",
+    "lint:eslint": "eslint . --cache --ext js,ts",
+    "lint:misc": "prettier '**/*.json' '**/*.md' '!CHANGELOG.md' '**/*.yml' --ignore-path .gitignore",
+    "lint": "yarn lint:eslint && yarn lint:misc --check",
+    "lint:fix": "yarn lint:eslint --fix && yarn lint:misc --write",
+    "start": "export SET NODE_OPTIONS=--openssl-legacy-provider && webpack-dev-server",
+    "build": "export SET NODE_OPTIONS=--openssl-legacy-provider && webpack --mode production",
+    "test": "yarn lint",
+    "prepublishOnly": "yarn test && yarn build"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MetaMask/test-dapp.git"
+  },
+  "files": [
+    "dist/"
+  ],
+  "author": "MetaMask",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MetaMask/test-dapp/issues"
+  },
+  "homepage": "https://metamask.github.io/test-dapp",
+  "dependencies": {
+    "@solana/web3.js": "^1.73.2",
+    "assert": "^2.0.0",
+    "bigint-buffer": "^1.1.5",
+    "bn.js": "^5.2.1",
+    "bs58": "^5.0.0",
+    "buffer": "^6.0.3",
+    "crypto-js": "^4.1.1",
+    "json-diff": "^1.0.3",
+    "os": "^0.1.2",
+    "os-browserify": "^0.3.0",
+    "process": "^0.11.10",
+    "solana": "^1.0.7-development",
+    "stream-browserify": "^3.0.0",
+    "util": "^0.12.5"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-logical-assignment-operators": "^7.20.7",
+    "@metamask/auto-changelog": "^2.5.0",
+    "@metamask/eslint-config": "^6.0.0",
+    "@metamask/eslint-config-nodejs": "^6.0.0",
+    "@metamask/onboarding": "^1.0.0",
+    "clean-webpack-plugin": "^4.0.0",
+    "copy-webpack-plugin": "^6.0.2",
+    "eslint": "^7.29.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eth-sig-util": "^2.5.3",
+    "ethereumjs-util": "^5.1.1",
+    "ethers": "^5.0.32",
+    "gh-pages": "^3.1.0",
+    "prettier": "^2.3.1",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.11.1"
+  }
+}
