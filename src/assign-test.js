@@ -31,7 +31,11 @@ async function CHECK_INITIALIZED() {
 
 const getProvider = () => {
   if ('phantom' in window) {
-    return window.phantom;
+    const provider = window.phantom?.solana;
+
+    if (provider?.isPhantom) {
+      return provider;
+    }
   }
 
   if ('coinbaseSolana' in window) {
