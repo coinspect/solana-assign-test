@@ -1,4 +1,4 @@
-### Setup
+# Setup
 
 - Install [Node.js](https://nodejs.org) version 18
   - If you are using [nvm](https://github.com/creationix/nvm#installation) (recommended) running `nvm use` will automatically choose the right node version for you.
@@ -8,7 +8,7 @@
 - `yarn start` to run
 
 
-### Attacker's smart contract deployment
+## Attacker's smart contract deployment
 1. Using [Solana Playground](https://beta.solpg.io/) is the simplest way to deploy
 2. If connecting it to mainnet-beta fails (it happens), an easy alternative is creating an [Alchemy](https://www.alchemy.com/) account and launching a Solana mainnet node, then add `custom` endpoint to the settings
 3. The IDE will create you an authority account for deploying the contract
@@ -17,12 +17,12 @@
 6. Build & Deploy
 7. Take your contract's address (program ID) and update the exploit code accordingly
 
-### Exploit setup
+## Exploit setup
 1. Set up accounts for attacker and victim
 2. Add public key for victim to `assign-test.js`
 3. Add private key for attacker to `assign-test.js`
 
-### Attack execution
+## Attack execution
 1. Open browser with Wallet extension and navigate to `http://localhost:9011/`
 2. Select the victim's wallet from accounts
 3. [On DApp] click connect
@@ -40,20 +40,7 @@
 
 # Disclaimer
 
-This repository contains a proof-of-concept (PoC) that demonstrates and reproduces a Solana transaction simulation bypass bug that previously affected certain Solana wallets. This content is provided for educational and research purposes only. Use at your own risk.
-
-## Important Notice
-
-- This vulnerability has been responsibly reported to all affected vendors.
-- All affected vendors have patched this vulnerability.
-- The code in this repository is not intended for malicious use.
-- Use of this code for any unauthorized or harmful activities is strictly prohibited.
-
-## Potential Risks
-
-Without Coinspect's responsible disclosure and work with  vendors to remediate this vulnerability, the code in this repository could have been used to:
-1. Take over a victim's Solana account
-2. Transfer funds without proper authorization
+This repository contains a proof-of-concept (PoC) that demonstrates and reproduces a Solana transaction simulation bypass bug that previously affected certain Solana wallets. This content is provided for educational and research purposes only. The authors and contributors of this repository are not responsible for any misuse of the provided information or code. 
 
 ## Responsible Use
 
@@ -62,8 +49,16 @@ This PoC is intended for:
 - Solana wallet developers
 - Individuals interested in understanding blockchain vulnerabilities
 
+## Responsibly Reported
+
+- This vulnerability has been responsibly reported to all affected vendors.
+- All affected vendors have patched this vulnerability.
+- The code in this repository is not intended for malicious use.
+
+Without Coinspect's responsible disclosure and work with  vendors to remediate this vulnerability, the code in this repository could have been used to:
+1. Take over a victim's Solana account
+2. Transfer funds without proper authorization
+
 ## Contact Information
 
-For any questions, concerns, or if you find any issues with the code, please open an issue in this repository.
-
-
+For any questions, concerns, or responsible disclosure of related vulnerabilities, please open an issue in this repository.
