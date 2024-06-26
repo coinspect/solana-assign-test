@@ -61,4 +61,4 @@ Without Coinspect's responsible disclosure and work with  vendors to remediate t
 
 ## Contact Information
 
-For any questions, concerns, or responsible disclosure of related vulnerabilities, please open an issue in this repository.
+For any questions, concerns, or issues in the codebase, please open an issue in this repository.
