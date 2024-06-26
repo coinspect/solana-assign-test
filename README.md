@@ -38,4 +38,32 @@
 - Call to attacker's contract drains the victim's wallet into the attacker's account
 - You can take TXID and check on explorer
 
+# Disclaimer
+
+This repository contains a proof-of-concept (PoC) that demonstrates and reproduces a Solana transaction simulation bypass bug that previously affected certain Solana wallets. This content is provided for educational and research purposes only. Use at your own risk.
+
+## Important Notice
+
+- This vulnerability has been responsibly reported to all affected vendors.
+- All affected vendors have patched this vulnerability.
+- The code in this repository is not intended for malicious use.
+- Use of this code for any unauthorized or harmful activities is strictly prohibited.
+
+## Potential Risks
+
+Without Coinspect's responsible disclosure and work with  vendors to remediate this vulnerability, the code in this repository could have been used to:
+1. Take over a victim's Solana account
+2. Transfer funds without proper authorization
+
+## Responsible Use
+
+This PoC is intended for:
+- Security researchers
+- Solana wallet developers
+- Individuals interested in understanding blockchain vulnerabilities
+
+## Contact Information
+
+For any questions, concerns, or if you find any issues with the code, please open an issue in this repository.
+
 
