@@ -1,3 +1,6 @@
+# The Vulnerability
+Read the [Unveiling Transaction Simulation Challenges](https://www.coinspect.com/blog/transaction-simulation-challenges/) blog post to understand the vulnerability and see a step-by-step attack reproduction.
+
 # Setup
 
 - Install [Node.js](https://nodejs.org) version 18
